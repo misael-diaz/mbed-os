@@ -15,18 +15,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-from . import mbed_toolchain, arm, gcc, iar
+from . import mbed_toolchain, gcc
 
 TOOLCHAIN_CLASSES = {
-    u'ARM': arm.ARM_STD,
-    u'uARM': arm.ARM_MICRO,
-    u'ARMC6': arm.ARMC6,
-    u'GCC_ARM': gcc.GCC_ARM,
-    u'IAR': iar.IAR
+    u'GCC_ARM': gcc.GCC_ARM
 }
 
 EXTRA_TOOLCHAIN_NAMES = [
-    u"ARMC5"
 ]
 
 TOOLCHAINS = set(TOOLCHAIN_CLASSES.keys())

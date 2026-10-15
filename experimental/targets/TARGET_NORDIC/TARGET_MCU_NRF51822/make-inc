@@ -1,0 +1,36 @@
+ANALOGIN_API_SRC = analogin_api.c
+GPIO_API_SRC = gpio_api.c
+GPIO_IRQ_API_SRC = gpio_irq_api.c
+I2C_API_SRC = i2c_api.c
+PINMAP_SRC = pinmap.c
+PORT_API_SRC = port_api.c
+PWMOUT_API_SRC = pwmout_api.c
+SERIAL_API_SRC = serial_api.c
+SLEEP_SRC = sleep.c
+SPI_API_SRC = spi_api.c
+US_TICKER_SRC = us_ticker.c
+
+ANALOGIN_API_OBJ = analogin_api.obj
+GPIO_API_OBJ = gpio_api.obj
+GPIO_IRQ_API_OBJ = gpio_irq_api.obj
+I2C_API_OBJ = i2c_api.obj
+PINMAP_OBJ = pinmap.obj
+PORT_API_OBJ = port_api.obj
+PWMOUT_API_OBJ = pwmout_api.obj
+SERIAL_API_OBJ = serial_api.obj
+SLEEP_OBJ = sleep.obj
+SPI_API_OBJ = spi_api.obj
+US_TICKER_OBJ = us_ticker.obj
+
+OBJS = \
+       $(ANALOGIN_API_OBJ)\
+       $(I2C_API_OBJ)\
+       $(GPIO_API_OBJ)\
+       $(GPIO_IRQ_API_OBJ)\
+       $(PINMAP_OBJ)\
+       $(PORT_API_OBJ)\
+       $(PWMOUT_API_OBJ)\
+       $(SERIAL_API_OBJ)\
+       $(SLEEP_OBJ)\
+       $(SPI_API_OBJ)\
+       $(US_TICKER_OBJ)

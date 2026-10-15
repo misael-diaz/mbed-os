@@ -1,0 +1,12 @@
+MBED_BOARD_SRC = mbed_board.c
+MBED_CRITICAL_SRC = mbed_critical.c
+MBED_ERROR_SRC = mbed_error.c
+
+MBED_BOARD_OBJ = mbed_board.obj
+MBED_CRITICAL_OBJ = mbed_critical.obj
+MBED_ERROR_OBJ = mbed_error.obj
+
+OBJS = \
+       $(MBED_BOARD_OBJ)\
+       $(MBED_CRITICAL_OBJ)\
+       $(MBED_ERROR_OBJ)

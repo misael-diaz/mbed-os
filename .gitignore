@@ -52,6 +52,7 @@ nosetests.xml
 
 # Translations
 *.mo
+*.obj
 
 # Mr Developer
 .mr.developer.cfg
@@ -97,3 +98,4 @@ test_suite.json
 
 # default delivery dir
 DELIVERY/
+references/

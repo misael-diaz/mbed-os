@@ -1,0 +1,43 @@
+#
+# mbed-os-fork				Oct 15, 2026
+#
+# source: make-inc
+# author: @misael-diaz
+#
+# Synopsis:
+# Defines the include file for building the program with GNU make.
+#
+# Copyright (c) 2026 Misael Díaz-Maldonado
+#
+# This file is released under the GNU General Public License version 2 only
+# as published by the Free Software Foundation.
+#
+
+CC = arm-none-eabi-gcc
+INCLUDES = \
+	-I$(PWD)/experimental/\
+	-I$(PWD)/experimental/hal\
+	-I$(PWD)/experimental/drivers\
+	-I$(PWD)/experimental/cmsis/TARGET_CORTEX_M\
+	-I$(PWD)/experimental/platform\
+	-I$(PWD)/experimental/targets/TARGET_NORDIC/\
+	-I$(PWD)/experimental/targets/TARGET_NORDIC/TARGET_MCU_NRF51822/\
+	-I$(PWD)/experimental/targets/TARGET_NORDIC/TARGET_MCU_NRF51822/device\
+	-I$(PWD)/experimental/targets/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_MICROBIT
+DEFINES = \
+	-DNRF51\
+	-DDEVICE_ANALOGIN\
+	-DDEVICE_INTERRUPTIN\
+	-DDEVICE_I2C\
+	-DDEVICE_PORTIN\
+	-DDEVICE_PWMOUT\
+	-DDEVICE_SERIAL\
+	-DDEVICE_SPI\
+	-DDEVICE_SLEEP\
+	-DMBED_APPLICATION_SUPPORT
+CCOPT=\
+      $(DEFINES)\
+      $(INCLUDES)\
+      -O0\
+      -mcpu=cortex-m0\
+      -march=armv6-m

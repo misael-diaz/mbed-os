@@ -1,4 +1,4 @@
-#! /usr/bin/env python2
+#!/usr/bin/env python3
 """
 mbed SDK
 Copyright (c) 2011-2013 ARM Limited
@@ -16,6 +16,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 LIBRARIES BUILD
+
+TODO
+BUILD TARGET NRF51822 THIS IS WHAT MICROBIT-DAL USES
 """
 
 import sys

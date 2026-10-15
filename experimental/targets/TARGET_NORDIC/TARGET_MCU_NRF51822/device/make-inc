@@ -1,0 +1,6 @@
+SYSTEM_NRF51_SRC = system_nrf51.c
+
+SYSTEM_NRF51_OBJ = system_nrf51.obj
+
+OBJS = \
+       $(SYSTEM_NRF51_OBJ)
