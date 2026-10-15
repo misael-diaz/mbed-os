@@ -1,12 +1,51 @@
+#
+# mbed-os-fork                          Oct 15, 2026
+#
+# source: make-inc
+# author: @misael-diaz
+#
+# Synopsis:
+# Defines the include file for building the program with GNU make.
+#
+# Copyright (c) 2026 Misael Díaz-Maldonado
+#
+# This file is released under the GNU General Public License version 2 only
+# as published by the Free Software Foundation.
+#
+
+MBED_ASSERT_SRC = mbed_assert.c
+MBED_ATOMIC_SRC = mbed_atomic_impl.c
 MBED_BOARD_SRC = mbed_board.c
 MBED_CRITICAL_SRC = mbed_critical.c
 MBED_ERROR_SRC = mbed_error.c
+MBED_ERROR_HIST_SRC = mbed_error_hist.c
+MBED_INTERFACE_SRC = mbed_interface.c
+MBED_MKTIME_SRC = mbed_mktime.c
+MBED_MPU_MGMT_SRC = mbed_mpu_mgmt.c
+MBED_POWER_MGMT_SRC = mbed_power_mgmt.c
+MBED_SEMIHOST_API_SRC = mbed_semihost_api.c
 
+MBED_ASSERT_OBJ = mbed_assert.obj
+MBED_ATOMIC_OBJ = mbed_atomic.obj
 MBED_BOARD_OBJ = mbed_board.obj
 MBED_CRITICAL_OBJ = mbed_critical.obj
 MBED_ERROR_OBJ = mbed_error.obj
+MBED_ERROR_HIST_OBJ = mbed_error_hist.obj
+MBED_INTERFACE_OBJ = mbed_interface.obj
+MBED_MKTIME_OBJ = mbed_mktime.obj
+MBED_MPU_MGMT_OBJ = mbed_mpu_mgmt.obj
+MBED_POWER_MGMT_OBJ = mbed_power_mgmt.obj
+MBED_SEMIHOST_API_OBJ = mbed_semihost_api.obj
 
 OBJS = \
+       $(MBED_ASSERT_OBJ)\
+       $(MBED_ATOMIC_OBJ)\
        $(MBED_BOARD_OBJ)\
        $(MBED_CRITICAL_OBJ)\
-       $(MBED_ERROR_OBJ)
+       $(MBED_ERROR_OBJ)\
+       $(MBED_ERROR_HIST_OBJ)\
+       $(MBED_INTERFACE_OBJ)\
+       $(MBED_MKTIME_OBJ)\
+       $(MBED_MPU_MGMT_OBJ)\
+       $(MBED_POWER_MGMT_OBJ)\
+       $(MBED_SEMIHOST_API_OBJ)
