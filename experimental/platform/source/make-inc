@@ -26,6 +26,10 @@ MBED_POWER_MGMT_SRC = mbed_power_mgmt.c
 MBED_SEMIHOST_API_SRC = mbed_semihost_api.c
 MBED_STATS_SRC = mbed_stats.c
 
+AT_CMD_PARSER_SRC = ATCmdParser.cpp
+CRITICAL_SECTION_LOCK_SRC = CriticalSectionLock.cpp
+CTHUNK_BASE_SRC = CThunkBase.cpp
+
 MBED_ASSERT_OBJ = mbed_assert.obj
 MBED_ATOMIC_OBJ = mbed_atomic.obj
 MBED_BOARD_OBJ = mbed_board.obj
@@ -39,6 +43,10 @@ MBED_POWER_MGMT_OBJ = mbed_power_mgmt.obj
 MBED_SEMIHOST_API_OBJ = mbed_semihost_api.obj
 MBED_STATS_OBJ = mbed_stats.obj
 
+AT_CMD_PARSER_OBJ = ATCmdParser.obj
+CRITICAL_SECTION_LOCK_OBJ = CriticalSectionLock.obj
+CTHUNK_BASE_OBJ = CThunkBase.obj
+
 OBJS = \
        $(MBED_ASSERT_OBJ)\
        $(MBED_ATOMIC_OBJ)\
@@ -51,4 +59,7 @@ OBJS = \
        $(MBED_MPU_MGMT_OBJ)\
        $(MBED_POWER_MGMT_OBJ)\
        $(MBED_SEMIHOST_API_OBJ)\
-       $(MBED_STATS_OBJ)
+       $(MBED_STATS_OBJ)\
+       $(AT_CMD_PARSER_OBJ)\
+       $(CRITICAL_SECTION_LOCK_OBJ)\
+       $(CTHUNK_BASE_OBJ)
