@@ -33,6 +33,8 @@ DEEP_SLEEP_LOCK_SRC = DeepSleepLock.cpp
 FILE_BASE_SRC = FileBase.cpp
 FILE_HANDLE_SRC = FileHandle.cpp
 FILE_PATH_SRC = FilePath.cpp
+FILE_SYSTEM_HANDLE_SRC = FileSystemHandle.cpp
+LOCAL_FILE_SYSTEM_SRC = LocalFileSystem.cpp
 
 MBED_ASSERT_OBJ = mbed_assert.obj
 MBED_ATOMIC_OBJ = mbed_atomic.obj
@@ -54,6 +56,8 @@ DEEP_SLEEP_LOCK_OBJ = DeepSleepLock.obj
 FILE_BASE_OBJ = FileBase.obj
 FILE_HANDLE_OBJ = FileHandle.obj
 FILE_PATH_OBJ = FilePath.obj
+FILE_SYSTEM_HANDLE_OBJ = FileSystemHandle.obj
+LOCAL_FILE_SYSTEM_OBJ = LocalFileSystem.obj
 
 OBJS = \
        $(MBED_ASSERT_OBJ)\
@@ -74,4 +78,6 @@ OBJS = \
        $(DEEP_SLEEP_LOCK_OBJ)\
        $(FILE_BASE_OBJ)\
        $(FILE_HANDLE_OBJ)\
-       $(FILE_PATH_OBJ)
+       $(FILE_PATH_OBJ)\
+       $(FILE_SYSTEM_HANDLE_OBJ)\
+       $(LOCAL_FILE_SYSTEM_OBJ)
