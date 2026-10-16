@@ -29,6 +29,10 @@ MBED_STATS_SRC = mbed_stats.c
 AT_CMD_PARSER_SRC = ATCmdParser.cpp
 CRITICAL_SECTION_LOCK_SRC = CriticalSectionLock.cpp
 CTHUNK_BASE_SRC = CThunkBase.cpp
+DEEP_SLEEP_LOCK_SRC = DeepSleepLock.cpp
+FILE_BASE_SRC = FileBase.cpp
+FILE_HANDLE_SRC = FileHandle.cpp
+FILE_PATH_SRC = FilePath.cpp
 
 MBED_ASSERT_OBJ = mbed_assert.obj
 MBED_ATOMIC_OBJ = mbed_atomic.obj
@@ -46,6 +50,10 @@ MBED_STATS_OBJ = mbed_stats.obj
 AT_CMD_PARSER_OBJ = ATCmdParser.obj
 CRITICAL_SECTION_LOCK_OBJ = CriticalSectionLock.obj
 CTHUNK_BASE_OBJ = CThunkBase.obj
+DEEP_SLEEP_LOCK_OBJ = DeepSleepLock.obj
+FILE_BASE_OBJ = FileBase.obj
+FILE_HANDLE_OBJ = FileHandle.obj
+FILE_PATH_OBJ = FilePath.obj
 
 OBJS = \
        $(MBED_ASSERT_OBJ)\
@@ -62,4 +70,8 @@ OBJS = \
        $(MBED_STATS_OBJ)\
        $(AT_CMD_PARSER_OBJ)\
        $(CRITICAL_SECTION_LOCK_OBJ)\
-       $(CTHUNK_BASE_OBJ)
+       $(CTHUNK_BASE_OBJ)\
+       $(DEEP_SLEEP_LOCK_OBJ)\
+       $(FILE_BASE_OBJ)\
+       $(FILE_HANDLE_OBJ)\
+       $(FILE_PATH_OBJ)
