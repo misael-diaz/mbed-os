@@ -24,6 +24,7 @@ MBED_MKTIME_SRC = mbed_mktime.c
 MBED_MPU_MGMT_SRC = mbed_mpu_mgmt.c
 MBED_POWER_MGMT_SRC = mbed_power_mgmt.c
 MBED_SEMIHOST_API_SRC = mbed_semihost_api.c
+MBED_STATS_SRC = mbed_stats.c
 
 MBED_ASSERT_OBJ = mbed_assert.obj
 MBED_ATOMIC_OBJ = mbed_atomic.obj
@@ -36,6 +37,7 @@ MBED_MKTIME_OBJ = mbed_mktime.obj
 MBED_MPU_MGMT_OBJ = mbed_mpu_mgmt.obj
 MBED_POWER_MGMT_OBJ = mbed_power_mgmt.obj
 MBED_SEMIHOST_API_OBJ = mbed_semihost_api.obj
+MBED_STATS_OBJ = mbed_stats.obj
 
 OBJS = \
        $(MBED_ASSERT_OBJ)\
@@ -48,4 +50,5 @@ OBJS = \
        $(MBED_MKTIME_OBJ)\
        $(MBED_MPU_MGMT_OBJ)\
        $(MBED_POWER_MGMT_OBJ)\
-       $(MBED_SEMIHOST_API_OBJ)
+       $(MBED_SEMIHOST_API_OBJ)\
+       $(MBED_STATS_OBJ)

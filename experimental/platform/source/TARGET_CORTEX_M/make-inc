@@ -1,0 +1,20 @@
+#
+# mbed-os-fork                          Oct 15, 2026
+#
+# source: make-inc
+# author: @misael-diaz
+#
+# Synopsis:
+# Defines the include file for building the program with GNU make.
+#
+# Copyright (c) 2026 Misael Díaz-Maldonado
+#
+# This file is released under the GNU General Public License version 2 only
+# as published by the Free Software Foundation.
+#
+
+MBED_FAULT_HANDLER_SRC = mbed_fault_handler.c
+
+MBED_FAULT_HANDLER_OBJ = mbed_fault_handler.obj
+
+OBJS = $(MBED_FAULT_HANDLER_OBJ)

@@ -16,7 +16,10 @@
 
 include make-inc
 
-all: $(OBJS)
+all: $(OBJS) target
+
+target:
+	@$(MAKE) -C TARGET_CORTEX_M
 
 $(MBED_ASSERT_OBJ): $(MBED_ASSERT_SRC)
 	$(CC) $(CCOPT) -c $(MBED_ASSERT_SRC) -o $(MBED_ASSERT_OBJ)
@@ -51,5 +54,9 @@ $(MBED_POWER_MGMT_OBJ): $(MBED_POWER_MGMT_SRC)
 $(MBED_SEMIHOST_API_OBJ): $(MBED_SEMIHOST_API_SRC)
 	$(CC) $(CCOPT) -c $(MBED_SEMIHOST_API_SRC) -o $(MBED_SEMIHOST_API_OBJ)
 
+$(MBED_STATS_OBJ): $(MBED_STATS_SRC)
+	$(CC) $(CCOPT) -c $(MBED_STATS_SRC) -o $(MBED_STATS_OBJ)
+
 clean:
+	@$(MAKE) -C TARGET_CORTEX_M clean
 	rm -f *.obj
