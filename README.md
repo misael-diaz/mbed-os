@@ -7,7 +7,12 @@ It will probably take me a while to get up to speed to be able to contribute to 
 Most of the work I am going to do is experimental and driven by my own curiosity.
 
 I am starting my exploration from mbed-os version 6 when developers round the world were
-still writing the code themselves.
+still writing the code themselves. To be accurate the mbed-os community edition has
+reasonable LLM usage guidelines, which can be consulted via this
+[link](https://mbed-ce.dev/for-developers/llm-policy/).
+Despite of the soundness of those guidelines, I still opted to start my work at an earlier
+time. Thanks to the freedom that open source provides I am able to do this for the sake
+of learning and honing my software development skills.
 
 ## Progress
 
