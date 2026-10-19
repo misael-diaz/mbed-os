@@ -35,6 +35,7 @@ FILE_HANDLE_SRC = FileHandle.cpp
 FILE_PATH_SRC = FilePath.cpp
 FILE_SYSTEM_HANDLE_SRC = FileSystemHandle.cpp
 LOCAL_FILE_SYSTEM_SRC = LocalFileSystem.cpp
+MBED_ALLOC_WRAPPERS_SRC = mbed_alloc_wrappers.cpp
 
 MBED_ASSERT_OBJ = mbed_assert.obj
 MBED_ATOMIC_OBJ = mbed_atomic.obj
@@ -58,6 +59,7 @@ FILE_HANDLE_OBJ = FileHandle.obj
 FILE_PATH_OBJ = FilePath.obj
 FILE_SYSTEM_HANDLE_OBJ = FileSystemHandle.obj
 LOCAL_FILE_SYSTEM_OBJ = LocalFileSystem.obj
+MBED_ALLOC_WRAPPERS_OBJ = mbed_alloc_wrappers.obj
 
 OBJS = \
        $(MBED_ASSERT_OBJ)\
@@ -80,4 +82,5 @@ OBJS = \
        $(FILE_HANDLE_OBJ)\
        $(FILE_PATH_OBJ)\
        $(FILE_SYSTEM_HANDLE_OBJ)\
-       $(LOCAL_FILE_SYSTEM_OBJ)
+       $(LOCAL_FILE_SYSTEM_OBJ)\
+       $(MBED_ALLOC_WRAPPERS_OBJ)
