@@ -457,6 +457,37 @@ static uint32_t get_next_tick_cc_delta() {
         // By default every delta is equal to 33.
         // Every five ticks (20%, 200 delta in one second), the delta is equal to 32
         // The remaining (32) deltas equal to 32 are distributed using primes numbers.
+	//
+	// CHECK
+	// checks the clock cycle count after 1000 ticks
+	//
+	// multiples of 5 hits:
+	// the number of times the 5 increments condition hits:
+	// 0:1005:5 or [0, 1005) in steps of 5 amounts to (1005 - 0)/5 = 201
+	// so we have 201 hits when the counter is a multiple of 5
+	//
+	// multiples of 31 hits:
+	// 31 (1*31), 62 (2*31), ..., 155 (5*31), ..., 992 (32*31)
+	// 1:32:1 yiels 31 but note that we also have multiples of 5 and so we must
+	// subtract those instances to get the number of hits, and those are represented
+	// by the arange 5:35:5 (it does not matter that we are using 35 instead of 32 as
+	// the end-point) and so we have (35 - 5) / 5 = 6 and so the total number of hits
+	// is 31 - 6 = 25
+	// so we have 25 hits when counter is a multiple of 31
+	//
+	// multiples of 139 hits:
+	// 1:8:1 = 7 and again 5:10:5 = 1 so we have a total of 6 hits
+	//
+	// and 503 only hits once
+	//
+	// 1 + 6 + 25 + 201 = 233 hits that involve 32 cycles
+	// and so we have 767 hits have involve 33 cycles
+	//
+	// this means that the number of cycles is 233*32 + 767*33 = 32767 cycles
+	//
+	// so we are only off by just one cycle from the target and this is probably
+	// what the precision trade-off is about
+	//
         static uint32_t counter = 0;
         if ((counter % 5) == 0 || (counter % 31) == 0 || (counter % 139) == 0 || (counter == 503)) {
             delta = 32;
