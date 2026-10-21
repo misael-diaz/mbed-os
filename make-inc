@@ -18,9 +18,13 @@ INCLUDES = \
 	-I$(PWD)/experimental/\
 	-I$(PWD)/experimental/hal\
 	-I$(PWD)/experimental/drivers\
+	-I$(PWD)/experimental/cmsis\
 	-I$(PWD)/experimental/cmsis/TARGET_CORTEX_M\
+	-I$(PWD)/experimental/rtos/source/TARGET_CORTEX\
 	-I$(PWD)/experimental/rtos/source/TARGET_CORTEX/rtx5/Include\
 	-I$(PWD)/experimental/rtos/source/TARGET_CORTEX/rtx5/RTX/Include\
+	-I$(PWD)/experimental/rtos/source/TARGET_CORTEX/rtx5/RTX/Source\
+	-I$(PWD)/experimental/rtos/source/TARGET_CORTEX/rtx5/RTX/Config\
 	-I$(PWD)/experimental/platform\
 	-I$(PWD)/experimental/platform/source\
 	-I$(PWD)/experimental/platform/internal\
@@ -47,6 +51,7 @@ DEFINES = \
 	-DDEVICE_SEMIHOST\
 	-DDEVICE_LOCALFILESYSTEM\
 	-DDEVICE_ID_LENGTH=255\
+	-DMBED_CONF_TARGET_TICKLESS_FROM_US_TICKER\
 	-DMBED_CONF_TARGET_INIT_US_TICKER_AT_BOOT\
 	-DMBED_CONF_PLATFORM_CTHUNK_COUNT_MAX=128\
 	-DMBED_ALL_STATS_ENABLED\
