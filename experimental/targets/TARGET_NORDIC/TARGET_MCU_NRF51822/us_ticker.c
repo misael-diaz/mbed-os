@@ -133,6 +133,15 @@ static void rtc1_start()
     nrf_delay_us(MAX_RTC_TASKS_DELAY);
 }
 
+// NOTE: for mbed platform us-ticker-api, otherwise this would be an unresolved symbol at link-time
+static ticker_info_t const info = {
+	.frequency = RTC_CLOCK_FREQ,
+	.bits = 24
+};
+ticker_info_t const *us_ticker_get_info(void) {
+	return &info;
+}
+
 /**
  * @brief Function for stopping the RTC1 timer. We don't expect to call this.
  */
@@ -325,6 +334,11 @@ void us_ticker_free(void)
 
 }
 
+// NOTE: for mbed platform us-ticker-api, again this would be an unresolved link when building the code for this MCU
+void block_us_ticker_free(void)
+{
+
+}
 
 #if defined (__CC_ARM)         /* ARMCC Compiler */
 
