@@ -50,6 +50,14 @@ typedef enum {
   PendSV_IRQn                   =  -2,              /*!<  14  Pendable request for system service                              */
   SysTick_IRQn                  =  -1,              /*!<  15  System Tick Timer                                                */
 /* ----------------------  nrf51 Specific Interrupt Numbers  ---------------------- */
+/*
+
+REF
+You may want to look at table 5-2 Instantiation table to check the IDs, these match the
+IRQ numbers (IRQn). The fact that the IDs match the IRQ numbers come from section
+10.1.1 of the NRF51 reference manual.
+
+*/
   POWER_CLOCK_IRQn              =   0,              /*!<   0  POWER_CLOCK                                                      */
   RADIO_IRQn                    =   1,              /*!<   1  RADIO                                                            */
   UART0_IRQn                    =   2,              /*!<   2  UART0                                                            */
