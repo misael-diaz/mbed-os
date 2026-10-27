@@ -32,8 +32,12 @@ SOFTWARE.
 #include <time.h>
 #include "device/nrf51.h"
 
+static time_t const unit = (1 << 24);
+static time_t const mask = ((1 << 24) - 1);
 static int rtc_started = 0;
-static time_t prev = 0;
+static time_t prev_tick = 0;
+static time_t ref_tick = 0;
+static time_t off_tick = 0;
 static time_t overflows = 0;
 
 void rtc_init(void) {
@@ -62,19 +66,22 @@ int rtc_isenabled(void) {
 
 time_t rtc_read(void) {
 	time_t ret = 0;
-	time_t curr = (NRF_RTC2->COUNTER);
-	time_t mask = ((1 << 24) - 1);
-	time_t const unit = (1 << 24);
-	if ((prev & mask) > (curr & mask)) {
+	time_t curr_tick = (NRF_RTC2->COUNTER);
+	if ((prev_tick & mask) > (curr_tick & mask)) {
 		++overflows;
 	}
-	curr += (overflows * unit);
-	prev = curr;
-	ret = (curr >> 15);
+	curr_tick += (overflows * unit);
+	prev_tick = curr_tick;
+	ret = (off_tick + (curr_tick - ref_tick)) >> 15;
 	return ret;
 }
 
-// NOTE we have yet to implement this API feature
 void rtc_write(time_t t) {
+	time_t ref_tick = (NRF_RTC2->COUNTER);
+	if ((prev_tick & mask) > (ref_tick & mask)) {
+		++overflows;
+	}
+	ref_tick += (overflows * unit);
+	off_tick = (t << 15);
 	return;
 }
