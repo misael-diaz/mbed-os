@@ -1214,6 +1214,7 @@ typedef struct {                                    /*!< GPIO Structure         
 #define NRF_SWI_BASE                    0x40014000UL
 #define NRF_NVMC_BASE                   0x4001E000UL
 #define NRF_PPI_BASE                    0x4001F000UL
+#define NRF_RTC2_BASE                   0x40024000UL
 #define NRF_FICR_BASE                   0x10000000UL
 #define NRF_UICR_BASE                   0x10001000UL
 #define NRF_GPIO_BASE                   0x50000000UL
@@ -1248,6 +1249,7 @@ typedef struct {                                    /*!< GPIO Structure         
 #define NRF_CCM                         ((NRF_CCM_Type            *) NRF_CCM_BASE)
 #define NRF_WDT                         ((NRF_WDT_Type            *) NRF_WDT_BASE)
 #define NRF_RTC1                        ((NRF_RTC_Type            *) NRF_RTC1_BASE)
+#define NRF_RTC2                        ((NRF_RTC_Type            *) NRF_RTC2_BASE)
 #define NRF_QDEC                        ((NRF_QDEC_Type           *) NRF_QDEC_BASE)
 #define NRF_LPCOMP                      ((NRF_LPCOMP_Type         *) NRF_LPCOMP_BASE)
 #define NRF_SWI                         ((NRF_SWI_Type            *) NRF_SWI_BASE)

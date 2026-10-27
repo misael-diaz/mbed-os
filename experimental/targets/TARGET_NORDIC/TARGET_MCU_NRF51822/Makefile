@@ -48,6 +48,9 @@ $(SERIAL_API_OBJ): $(SERIAL_API_SRC)
 $(SLEEP_OBJ): $(SLEEP_SRC)
 	$(CC) $(CCOPT) -c $(SLEEP_SRC) -o $(SLEEP_OBJ)
 
+$(RTC_OBJ): $(RTC_SRC)
+	$(CC) $(CCOPT) -c $(RTC_SRC) -o $(RTC_OBJ)
+
 $(SPI_API_OBJ): $(SPI_API_SRC)
 	$(CC) $(CCOPT) -c $(SPI_API_SRC) -o $(SPI_API_OBJ)
 
