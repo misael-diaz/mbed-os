@@ -28,6 +28,10 @@ SOFTWARE.
 // NRF51 family boards. Calling the rtc_read() returns the value of the seconds, which
 // equals the value of the COUNTER register divided by the frequency of the RTC. Counter
 // overflow is taken into account.
+//
+// POSSIBLE CAVEATS:
+// we are assuming that there are no hardware bugs when reading the RTC, read the
+// rtc_api.h for more info.
 
 #include <time.h>
 #include "device/nrf51.h"
