@@ -41,6 +41,7 @@ MBED_OS_TIMER_SRC = mbed_os_timer.cpp
 MBED_RTC_TIME_SRC = mbed_rtc_time.cpp
 MBED_THREAD_SRC = mbed_thread.cpp
 MBED_STREAM_SRC = Stream.cpp
+MBED_SYSTIMER_SRC = SysTimer.cpp
 
 MBED_ASSERT_OBJ = mbed_assert.obj
 MBED_ATOMIC_OBJ = mbed_atomic.obj
@@ -57,6 +58,7 @@ MBED_STATS_OBJ = mbed_stats.obj
 MBED_RTC_TIME_OBJ = mbed_rtc_time.obj
 MBED_THREAD_OBJ = mbed_thread.obj
 MBED_STREAM_OBJ = Stream.obj
+MBED_SYSTIMER_OBJ = SysTimer.obj
 
 AT_CMD_PARSER_OBJ = ATCmdParser.obj
 CRITICAL_SECTION_LOCK_OBJ = CriticalSectionLock.obj
@@ -98,4 +100,5 @@ OBJS = \
        $(MBED_OS_TIMER_OBJ)\
        $(MBED_RTC_TIME_OBJ)\
        $(MBED_THREAD_OBJ)\
-       $(MBED_STREAM_OBJ)
+       $(MBED_STREAM_OBJ)\
+       $(MBED_SYSTIMER_OBJ)
