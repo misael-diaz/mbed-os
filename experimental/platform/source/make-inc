@@ -39,6 +39,7 @@ MBED_ALLOC_WRAPPERS_SRC = mbed_alloc_wrappers.cpp
 MBED_MEM_TRACE_SRC = mbed_mem_trace.cpp
 MBED_OS_TIMER_SRC = mbed_os_timer.cpp
 MBED_RTC_TIME_SRC = mbed_rtc_time.cpp
+MBED_THREAD_SRC = mbed_thread.cpp
 
 MBED_ASSERT_OBJ = mbed_assert.obj
 MBED_ATOMIC_OBJ = mbed_atomic.obj
@@ -53,6 +54,7 @@ MBED_POWER_MGMT_OBJ = mbed_power_mgmt.obj
 MBED_SEMIHOST_API_OBJ = mbed_semihost_api.obj
 MBED_STATS_OBJ = mbed_stats.obj
 MBED_RTC_TIME_OBJ = mbed_rtc_time.obj
+MBED_THREAD_OBJ = mbed_thread.obj
 
 AT_CMD_PARSER_OBJ = ATCmdParser.obj
 CRITICAL_SECTION_LOCK_OBJ = CriticalSectionLock.obj
@@ -92,4 +94,5 @@ OBJS = \
        $(MBED_ALLOC_WRAPPERS_OBJ)\
        $(MBED_MEM_TRACE_OBJ)\
        $(MBED_OS_TIMER_OBJ)\
-       $(MBED_RTC_TIME_OBJ)
+       $(MBED_RTC_TIME_OBJ)\
+       $(MBED_THREAD_OBJ)
